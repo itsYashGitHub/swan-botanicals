@@ -1,0 +1,78 @@
+import mainLogo from "../../assets/main-logo.png";
+
+const products = [
+  {
+    id: 1,
+    name: "Advanced Snail 92 All In One Cream 100g",
+    image: mainLogo,
+    rating: 5,
+    originalPrice: 1650,
+    discountPrice: 1320,
+    discount: 20,
+  },
+  {
+    id: 2,
+    name: "The 6 Peptide Skin Booster Serum 150ml, 150g",
+    image: mainLogo,
+    rating: 5,
+    originalPrice: 2050,
+    discountPrice: 1640,
+    discount: 20,
+  },
+  {
+    id: 3,
+    name: "Advanced Snail 96 Mucin Power Essence 100ml",
+    image: mainLogo,
+    rating: 5,
+    originalPrice: 1450,
+    discountPrice: 1160,
+    discount: 20,
+  },
+  {
+    id: 4,
+    name: "Wrinkle Care & Barrier Repair: Peptide + Snail 96",
+    image: mainLogo,
+    rating: 5,
+    originalPrice: 3500,
+    discountPrice: 2800,
+    discount: 20,
+  },
+  {
+    id: 5,
+    name: "Sample Product No Discount",
+    image: mainLogo,
+    rating: 4,
+    originalPrice: 1000,
+    discountPrice: 1000,
+    discount: 0,
+  },
+  {
+    id: 6,
+    name: "Sample Product No Discount",
+    image: mainLogo,
+    rating: 4,
+    originalPrice: 1000,
+    discountPrice: 1000,
+    discount: 0,
+  },
+  {
+    id: 7,
+    name: "Sample Product No Discount",
+    image: mainLogo,
+    rating: 4,
+    originalPrice: 1000,
+    discountPrice: 1000,
+    discount: 0,
+  },
+  {
+    id: 8,
+    name: "Sample Product No Discount",
+    image: mainLogo,
+    rating: 4,
+    originalPrice: 1000,
+    discountPrice: 1000,
+    discount: 0,
+  },
+];
+
+export default products;

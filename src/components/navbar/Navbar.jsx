@@ -11,12 +11,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-primaryIvory border-b border-gray-400">
+      <nav className="border-b border-gray-400">
         <div className="container flex justify-between items-center">
           {/* Logo section */}
-          <div className="text-2xl flex items-center gap-2 font-bold uppercase">
-            <img className="h-13 w-12" src={mainLogo} alt="logo" />
-          </div>
+          <img className="h-13 w-12" src={mainLogo} alt="logo" />
 
           {/* Menu section */}
           <div className="hidden md:block">
@@ -44,7 +42,7 @@ const Navbar = () => {
             <button className="text-2xl hover:bg-accentCharcoal hover:text-white rounded-full p-2 duration-200">
               <PiShoppingCart className="text-2xl" />
             </button>
-            <button className="hover:bg-accentCharcoal bg-secondarySage text-primary font-semibold hover:text-white rounded-md border-2 border-primary px-6 py-2 duration-200 hidden md:block">
+            <button className="hover:bg-accentCharcoal bg-secondarySage text-primary font-semibold hover:text-white rounded-md border-2 border-black px-5 py-1 duration-200 hidden md:block">
               Login
             </button>
           </div>
