@@ -17,7 +17,7 @@ const FilterSidebar = ({ onFilter }) => {
   };
 
   return (
-    <div className="w-[300px] p-4 hidden lg:block ml-10">
+    <div className="w-[300px] p-4 hidden lg:block ml-10 mt-10">
       {/* Price Filter */}
       <h2 className="font-semibold mb-2">Filter by price</h2>
       <input

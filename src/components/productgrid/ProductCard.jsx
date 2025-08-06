@@ -1,6 +1,3 @@
-// components/ProductCard.jsx
-
-
 const ProductCard = ({ product }) => {
   const {
     name,

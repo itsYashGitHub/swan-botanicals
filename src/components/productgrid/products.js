@@ -73,6 +73,42 @@ const products = [
     discountPrice: 1000,
     discount: 0,
   },
+  {
+    id: 9,
+    name: "Sample Product No Discount",
+    image: mainLogo,
+    rating: 4,
+    originalPrice: 1000,
+    discountPrice: 1000,
+    discount: 0,
+  },
+  {
+    id: 10,
+    name: "Sample Product No Discount",
+    image: mainLogo,
+    rating: 4,
+    originalPrice: 1000,
+    discountPrice: 1000,
+    discount: 0,
+  },
+  {
+    id: 11,
+    name: "Sample Product No Discount",
+    image: mainLogo,
+    rating: 4,
+    originalPrice: 1000,
+    discountPrice: 1000,
+    discount: 0,
+  },
+  {
+    id: 12,
+    name: "Sample Product No Discount",
+    image: mainLogo,
+    rating: 3,
+    originalPrice: 1000,
+    discountPrice: 1000,
+    discount: 0,
+  },
 ];
 
 export default products;
