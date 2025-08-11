@@ -1,7 +1,7 @@
 import ProductCard from "./ProductCard";
 import products from "./products";
 import { useState } from "react";
-import FilterSidebar from "../filter/FilterSidebar";
+import FilterSidebar from "../FilterSidebar";
 
 const ProductGrid = () => {
   const [filteredProducts, setFilteredProducts] = useState(products);

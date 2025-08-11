@@ -1,15 +1,18 @@
-import Navbar from "./components/navbar/Navbar";
-import ImageSlider from "./components/imageslider/ImageSlider";
-import ProductGrid from "./components/productgrid/ProductGrid";
-import BestSellersCarousel from "./components/BestSellersCarousel";
+// App.jsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+
 function App() {
   return (
-    <div className="bg-primaryIvory">
-      <Navbar />
-      <ImageSlider />
-      <ProductGrid />
-      <BestSellersCarousel />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 

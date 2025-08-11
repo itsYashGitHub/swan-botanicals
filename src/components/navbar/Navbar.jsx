@@ -1,4 +1,4 @@
-import { NavbarMenu } from "../../data/data";
+import { NavbarMenu } from "./data";
 import { CiSearch } from "react-icons/ci";
 import { MdMenu } from "react-icons/md";
 import { PiShoppingCart } from "react-icons/pi";
