@@ -2,9 +2,11 @@ import ProductCard from "./ProductCard";
 import products from "./products";
 import { useState } from "react";
 import FilterSidebar from "../FilterSidebar";
+import { useCart } from "../../context/CartContext";
 
-const ProductGrid = () => {
+const ProductGrid = ({ cartMode = false, limit = null }) => {
   const [filteredProducts, setFilteredProducts] = useState(products);
+  const { cart } = useCart();
 
   const applyFilter = ({ priceRange, selectedRatings }) => {
     const [min, max] = priceRange;
@@ -21,18 +23,37 @@ const ProductGrid = () => {
     setFilteredProducts(filtered);
   };
 
-  return (
-    <div className="flex">
-      {/* Filter section placeholder */}
-      <FilterSidebar onFilter={applyFilter} className="hidden lg:block" />
+  // If in cart mode → show cart items
+  let displayProducts = cartMode ? cart : filteredProducts;
 
-      {/* Product grid */}
+  // If limit is given → slice the array
+  if (!cartMode && limit) {
+    displayProducts = displayProducts.slice(0, limit);
+  }
+
+  return (
+    <div className="flex mt-10 mb-10">
+      {/* Show filter only if not in cart mode */}
+      {!cartMode && (
+        <FilterSidebar onFilter={applyFilter} className="hidden lg:block" />
+      )}
+
       <div className="flex-1 px-4 mt-10 mr-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        {displayProducts.length === 0 ? (
+          <p className="text-center text-gray-500 mt-10 text-lg">
+            {cartMode ? "Your cart is empty." : "No products found."}
+          </p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {displayProducts.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                cartMode={cartMode}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

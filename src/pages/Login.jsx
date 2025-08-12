@@ -1,14 +1,11 @@
 import Navbar from "../components/navbar/Navbar"
 
-const Contact = () => {
+const Login = () => {
   return (
-    <div className="bg-primaryIvory">
+    <div>
       <Navbar />
-
-      
-
     </div>
   )
 }
 
-export default Contact
+export default Login

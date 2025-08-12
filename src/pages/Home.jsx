@@ -10,10 +10,18 @@ const Home = () => {
     <div className="bg-primaryIvory">
       <Navbar />
       <ImageSlider />
-      <ProductGrid />
-      <BestSellersCarousel />
-      <ValuesSection />
-      <TestimonialsCarousel />
+      <div id="products">
+        <ProductGrid limit={8} />
+      </div>
+      <div id="bestsellers">
+        <BestSellersCarousel />
+      </div>
+      <div id="values">
+        <ValuesSection />
+      </div>
+      <div id="testimonials">
+        <TestimonialsCarousel />
+      </div>
       <Footer />
     </div>
   );
