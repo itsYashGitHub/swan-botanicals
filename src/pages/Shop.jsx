@@ -6,7 +6,6 @@ const Shop = () => {
   return (
     <div className="bg-primaryIvory">
       <Navbar />
-      <h1 className="text-3xl font-bold text-accentForest mt-12 ml-4">Our Products</h1>
       <ProductGrid />
       <Footer />
     </div>

@@ -21,7 +21,7 @@ const MobileFilter = ({ onFilter }) => {
   };
 
   return (
-    <div className="block lg:hidden mb-4 ml-4">
+    <div className="block lg:hidden mb-4 ml-4 mt-10">
       {/* Filter toggle button */}
       <button
         className="flex items-center gap-2 bg-secondarySage text-white px-4 py-2 rounded-full shadow-md"
