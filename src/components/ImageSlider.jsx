@@ -1,5 +1,5 @@
-import img1 from "../assets/img1.jpeg";
-import img2 from "../assets/img2.jpeg";
+import img1 from "../assets/img1.jpg";
+import img2 from "../assets/img2.jpg";
 import { useState, useEffect } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";

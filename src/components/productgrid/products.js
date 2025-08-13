@@ -1,10 +1,17 @@
-import mainLogo from "../../assets/main-logo.png";
+import productImg1 from "../../assets/product1.jpg";
+import productImg2 from "../../assets/product2.jpg";
+import productImg3 from "../../assets/product3.jpg";
+import productImg4 from "../../assets/product4.jpg";
+import productImg5 from "../../assets/product5.jpg";
+import productImg6 from "../../assets/product6.jpg";
+import productImg7 from "../../assets/product7.jpg";
+import productImg8 from "../../assets/product8.jpg";
 
 const products = [
   {
     id: 1,
-    name: "Advanced Snail 92 All In One Cream 100g",
-    image: mainLogo,
+    name: "Sample Product",
+    image: productImg1,
     rating: 5,
     originalPrice: 1650,
     discountPrice: 1320,
@@ -12,8 +19,8 @@ const products = [
   },
   {
     id: 2,
-    name: "The 6 Peptide Skin Booster Serum 150ml, 150g",
-    image: mainLogo,
+    name: "Sample Product",
+    image: productImg2,
     rating: 5,
     originalPrice: 2050,
     discountPrice: 1640,
@@ -21,8 +28,8 @@ const products = [
   },
   {
     id: 3,
-    name: "Advanced Snail 96 Mucin Power Essence 100ml",
-    image: mainLogo,
+    name: "Sample Product",
+    image: productImg3,
     rating: 5,
     originalPrice: 1450,
     discountPrice: 1160,
@@ -30,8 +37,8 @@ const products = [
   },
   {
     id: 4,
-    name: "Wrinkle Care & Barrier Repair: Peptide + Snail 96",
-    image: mainLogo,
+    name: "Sample Product",
+    image: productImg4,
     rating: 5,
     originalPrice: 3500,
     discountPrice: 2800,
@@ -40,7 +47,7 @@ const products = [
   {
     id: 5,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg5,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -49,7 +56,7 @@ const products = [
   {
     id: 6,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg6,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -58,7 +65,7 @@ const products = [
   {
     id: 7,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg7,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -67,7 +74,7 @@ const products = [
   {
     id: 8,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg8,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -76,7 +83,7 @@ const products = [
    {
     id: 9,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg1,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -85,7 +92,7 @@ const products = [
    {
     id: 10,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg2,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -94,7 +101,7 @@ const products = [
    {
     id: 11,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg3,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -103,7 +110,7 @@ const products = [
    {
     id: 12,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg4,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -112,7 +119,7 @@ const products = [
     {
     id: 13,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg5,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -121,7 +128,7 @@ const products = [
    {
     id: 14,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg6,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -130,7 +137,7 @@ const products = [
    {
     id: 15,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg7,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -139,7 +146,7 @@ const products = [
    {
     id: 16,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg8,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -148,7 +155,7 @@ const products = [
   {
     id: 17,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg1,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -157,7 +164,7 @@ const products = [
   {
     id: 18,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg2,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -166,7 +173,7 @@ const products = [
   {
     id: 19,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg3,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -175,7 +182,7 @@ const products = [
   {
     id: 20,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg4,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -184,7 +191,7 @@ const products = [
   {
     id: 21,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg5,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -193,7 +200,7 @@ const products = [
   {
     id: 22,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg6,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -202,7 +209,7 @@ const products = [
   {
     id: 23,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg7,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
@@ -211,7 +218,7 @@ const products = [
   {
     id: 24,
     name: "Sample Product No Discount",
-    image: mainLogo,
+    image: productImg8,
     rating: 4,
     originalPrice: 1000,
     discountPrice: 1000,
