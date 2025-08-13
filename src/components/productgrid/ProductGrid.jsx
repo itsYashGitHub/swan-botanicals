@@ -1,7 +1,8 @@
 import ProductCard from "./ProductCard";
 import products from "./products";
 import { useState } from "react";
-import FilterSidebar from "../FilterSidebar";
+import FilterSidebar from "../filter/FilterSidebar";
+import MobileFilter from "../filter/MobileFilter";
 import { useCart } from "../../context/CartContext";
 
 const ProductGrid = ({ cartMode = false, limit = null }) => {
@@ -10,7 +11,6 @@ const ProductGrid = ({ cartMode = false, limit = null }) => {
 
   const applyFilter = ({ priceRange, selectedRatings }) => {
     const [min, max] = priceRange;
-
     const filtered = products.filter((product) => {
       const withinPrice =
         product.discountPrice >= min && product.discountPrice <= max;
@@ -19,26 +19,26 @@ const ProductGrid = ({ cartMode = false, limit = null }) => {
         selectedRatings.includes(product.rating);
       return withinPrice && matchesRating;
     });
-
     setFilteredProducts(filtered);
   };
 
-  // If in cart mode → show cart items
   let displayProducts = cartMode ? cart : filteredProducts;
-
-  // If limit is given → slice the array
   if (!cartMode && limit) {
     displayProducts = displayProducts.slice(0, limit);
   }
 
   return (
-    <div className="flex mt-10 mb-10">
-      {/* Show filter only if not in cart mode */}
+    <div className="flex flex-col lg:flex-row mt-4 mb-10">
+      {/* Mobile filter */}
+      {!cartMode && <MobileFilter onFilter={applyFilter} />}
+
+      {/* Desktop filter */}
       {!cartMode && (
         <FilterSidebar onFilter={applyFilter} className="hidden lg:block" />
       )}
 
-      <div className="flex-1 px-4 mt-10 mr-10">
+      {/* Product grid */}
+      <div className="flex-1 px-4 mt-4 lg:mt-10 mr-0 lg:mr-10">
         {displayProducts.length === 0 ? (
           <p className="text-center text-gray-500 mt-10 text-lg">
             {cartMode ? "Your cart is empty." : "No products found."}

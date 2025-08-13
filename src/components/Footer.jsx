@@ -1,7 +1,7 @@
 import { FaInstagram, FaFacebookF, FaYoutube, FaTwitter } from "react-icons/fa";
 import { FiPhone, FiClock, FiCalendar } from "react-icons/fi";
 import googlePlay from "../assets/google-play.png";
-import appStore from "../assets/app-store.png"; 
+import appStore from "../assets/app-store.png";
 
 const Footer = () => {
   return (
@@ -12,6 +12,7 @@ const Footer = () => {
           <h2 className="text-primaryMint text-2xl font-semibold">
             Swan Botanicals
           </h2>
+
           <p className="text-sm mt-2 text-primaryIvory">
             When botanical meet quality, people can't help but notice.
             <br />

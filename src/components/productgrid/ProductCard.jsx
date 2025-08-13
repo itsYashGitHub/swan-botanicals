@@ -50,7 +50,7 @@ const ProductCard = ({ product, cartMode = false }) => {
         onClick={handleClick}
         className={`w-full font-medium py-2 rounded ${
           cartMode
-            ? "bg-red-500 hover:bg-red-600 text-white"
+            ? "bg-secondaryPink hover:bg-pink-400 text-accentForest"
             : isInCart
             ? "bg-accentForest hover:bg-green-700 text-white"
             : "bg-secondarySage hover:bg-secondaryLeaf text-white"

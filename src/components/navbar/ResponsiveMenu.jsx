@@ -5,17 +5,19 @@ import { NavbarMenu } from "./data";
 const ResponsiveMenu = ({ open, setOpen }) => {
   const navigate = useNavigate();
   const location = useLocation();
+
   return (
     <AnimatePresence mode="wait">
       {open && (
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
+          exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="absolute top-20 left-0 w-full z-20"
+          // Changed from absolute to fixed so it follows viewport
+          className="fixed top-[80px] left-0 w-full z-40"
         >
-          <div className="text-xl font-semibold uppercase bg-secondarySage text-accentForest py-10 m-6 rounded-2xl">
+          <div className="text-xl font-semibold uppercase bg-secondarySage text-accentForest py-10 px-6 rounded-b-2xl shadow-lg">
             <ul className="flex flex-col justify-center items-center gap-10">
               {NavbarMenu.map((item) => {
                 const isActive = location.pathname === item.link;
