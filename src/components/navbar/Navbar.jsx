@@ -229,10 +229,7 @@ const Navbar = () => {
             </button>
 
             {/* Login */}
-            <button
-              className="hover:bg-accentCharcoal bg-secondarySage text-primary font-semibold hover:text-white rounded-md border-2 border-black px-5 py-1 duration-200 hidden md:block"
-              onClick={() => navigate("/login")}
-            >
+            <button className="hover:bg-accentCharcoal bg-secondarySage text-primary font-semibold hover:text-white rounded-md border-2 border-black px-5 py-1 duration-200 hidden md:block">
               Login
             </button>
           </div>

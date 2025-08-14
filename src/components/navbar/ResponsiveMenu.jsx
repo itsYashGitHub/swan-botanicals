@@ -14,7 +14,6 @@ const ResponsiveMenu = ({ open, setOpen }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          // Changed from absolute to fixed so it follows viewport
           className="fixed top-[80px] left-0 w-full z-40"
         >
           <div className="text-xl font-semibold uppercase bg-secondarySage text-accentForest py-10 px-6 rounded-b-2xl shadow-lg">

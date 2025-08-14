@@ -1,4 +1,8 @@
-import mainLogo from "../../assets/main-logo.png";
+import product1 from "../../assets/product1.jpg";
+import product2 from "../../assets/product2.jpg";
+import product3 from "../../assets/product3.jpg";
+import product4 from "../../assets/product4.jpg";
+import product5 from "../../assets/product5.jpg";
 
 const testimonials = [
   {
@@ -8,8 +12,8 @@ const testimonials = [
     title: "Good",
     review: "Really moisturizes and doesn't make it oily and gives a smooth skin",
     date: "07/16/25",
-    product: "Vitamin B5 10% Moisturizer",
-    image: mainLogo,
+    product: "Sample product",
+    image: product1,
   },
   {
     id: 2,
@@ -18,8 +22,8 @@ const testimonials = [
     title: "Best absorption",
     review: "Started to feel firmness in my skin within 1 week of usage",
     date: "07/15/25",
-    product: "Granactive Retinoid 2% Face Cream",
-    image: mainLogo,
+    product: "Sample product",
+    image: product2,
   },
   {
     id: 3,
@@ -29,8 +33,8 @@ const testimonials = [
     review:
       "Hi Swan Botanicals, Just wanted to say — the product is genuinely very good. Simple, effective, and exactly what I needed. Thank you! – Payal",
     date: "07/15/25",
-    product: "Anti-Acne Skin Care Kit",
-    image: mainLogo,
+    product: "Sample product",
+    image: product3,
   },
   {
     id: 4,
@@ -40,8 +44,8 @@ const testimonials = [
     review:
       "Hi Swan Botanicals, Just wanted to say — the product is genuinely very good. Simple, effective, and exactly what I needed. Thank you! – Payal",
     date: "07/15/25",
-    product: "Anti-Acne Skin Care Kit",
-    image: mainLogo,
+    product: "Sample product",
+    image: product4,
   },
   {
     id: 5,
@@ -51,8 +55,8 @@ const testimonials = [
     review:
       "Hi Swan Botanicals, Just wanted to say — the product is genuinely very good. Simple, effective, and exactly what I needed. Thank you! – Payal",
     date: "07/15/25",
-    product: "Anti-Acne Skin Care Kit",
-    image: mainLogo,
+    product: "Sample product",
+    image: product5,
   },
   // Add more...
 ];

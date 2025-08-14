@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import ProductCard from "./productgrid/ProductCard";
-import products from "./productgrid/products"; // You can filter only best sellers here
+import products from "./productgrid/products";
 
 const BestSellersCarousel = () => {
   const containerRef = useRef(null);

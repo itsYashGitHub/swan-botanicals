@@ -11,10 +11,10 @@ const ProductCard = ({ product, cartMode = false }) => {
 
   const handleClick = () => {
     if (cartMode) {
-      // Cart page → Remove from cart
+      // Cart page -> Remove from cart
       removeFromCart(product.id);
     } else if (isInCart) {
-      // Already in cart → Go to cart
+      // Already in cart -> Go to cart
       navigate("/cart");
     } else {
       // Add to cart
