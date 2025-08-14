@@ -199,9 +199,15 @@ const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -6 }}
                     transition={{ duration: 0.18 }}
-                    className="absolute mt-2 right-0 z-50"
+                    className="absolute top-full right-0 md:right-auto md:left-auto md:mt-2 mt-2 z-50 w-full flex justify-center md:justify-end"
                   >
-                    <div className="flex items-center border-2 border-accentForest rounded-lg bg-white px-2 py-1 w-56 md:w-64 shadow-sm">
+                    <div
+                      className="
+          flex items-center border-2 border-accentForest rounded-lg bg-white px-2 py-1 
+          shadow-sm
+          w-[90vw] max-w-sm md:w-64
+        "
+                    >
                       <CiSearch className="text-gray-500 text-lg mr-2" />
                       <input
                         ref={searchRef}

@@ -5,32 +5,54 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const TestimonialsCarousel = () => {
   const scrollRef = useRef(null);
+  const indexRef = useRef(0); // track which card is active
 
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      const scrollAmount = direction === "left" ? -400 : 400;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
+  const centerCardAtIndex = (i) => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const children = container.children;
+    const count = children.length;
+    if (!count) return;
+
+    // wrap index
+    const idx = ((i % count) + count) % count;
+    const cardEl = children[idx];
+
+    // position of the card relative to the scroll container
+    const cRect = container.getBoundingClientRect();
+    const elRect = cardEl.getBoundingClientRect();
+    const relativeLeft = elRect.left - cRect.left + container.scrollLeft;
+
+    // center target
+    const targetLeft =
+      relativeLeft - (container.clientWidth - cardEl.clientWidth) / 2;
+
+    container.scrollTo({ left: Math.max(0, targetLeft), behavior: "smooth" });
+    indexRef.current = idx;
   };
 
-  const autoScroll = () => {
-    if (scrollRef.current) {
-      const container = scrollRef.current;
-      // If we've reached (or nearly reached) the end, jump back to start
-      if (
-        container.scrollLeft + container.clientWidth >=
-        container.scrollWidth - 5
-      ) {
-        container.scrollTo({ left: 0, behavior: "smooth" });
-      } else {
-        container.scrollBy({ left: 400, behavior: "smooth" });
-      }
-    }
-  };
+  const next = () => centerCardAtIndex(indexRef.current + 1);
+  const prev = () => centerCardAtIndex(indexRef.current - 1);
 
+  // Auto-scroll every 3s
   useEffect(() => {
-    const interval = setInterval(autoScroll, 4000);
-    return () => clearInterval(interval);
+    // center first card on mount
+    const id0 = requestAnimationFrame(() => centerCardAtIndex(0));
+
+    const interval = setInterval(next, 3000);
+
+    // recenter on resize/orientation change
+    const onResize = () => centerCardAtIndex(indexRef.current);
+    window.addEventListener("resize", onResize);
+    window.addEventListener("orientationchange", onResize);
+
+    return () => {
+      cancelAnimationFrame(id0);
+      clearInterval(interval);
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("orientationchange", onResize);
+    };
   }, []);
 
   return (
@@ -50,13 +72,13 @@ const TestimonialsCarousel = () => {
 
         {/* Navigation buttons */}
         <button
-          onClick={() => scroll("left")}
+          onClick={prev}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
-          onClick={() => scroll("right")}
+          onClick={next}
           className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10"
         >
           <ChevronRight className="w-5 h-5" />
