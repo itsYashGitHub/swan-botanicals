@@ -118,7 +118,7 @@ const ContactForm = () => {
         </div>
 
         {/* Floating Icons */}
-        <div className="fixed bottom-6 right-6 flex flex-col gap-3">
+        <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
           {[
             {
               href: "https://wa.me/1234567890",
@@ -135,7 +135,11 @@ const ContactForm = () => {
               icon: <FaPhoneAlt size={20} />,
               hoverColor: "hover:bg-[#0F9D58]",
             },
-            { href: "#", icon: <FaRobot size={20} />, hoverColor: "hover:bg-[#8A2BE2]" },
+            {
+              href: "#",
+              icon: <FaRobot size={20} />,
+              hoverColor: "hover:bg-[#8A2BE2]",
+            },
           ].map((item, index) => (
             <a
               key={index}
